@@ -12,7 +12,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "excel": "^1.0.1",
     "express": "^4.19.2",
+    "json2csv": "^6.0.0-alpha.2",
     "morgan": "^1.10.0",
     "mysql2": "^3.10.1",
     "nodemon": "^3.1.3",

@@ -3,6 +3,11 @@ const createProductoHandler = require("./stock/createProducto.handler");
 const deleteProductoHanlder = require("./stock/deleteProductoHanlder");
 const updateProductoHandler = require("./stock/updateProducto.hanlder");
 const productoIdHanlder = require("./stock/productoId.handlee");
+const {
+  orderPorNombreHandler,
+  orderPorCategoriaHandler,
+  ordenarPorMarcaHandler,
+} = require("./stock/orderProducto.handler");
 
 module.exports = {
   getDBHandler,
@@ -10,4 +15,7 @@ module.exports = {
   deleteProductoHanlder,
   updateProductoHandler,
   productoIdHanlder,
+  orderPorNombreHandler,
+  orderPorCategoriaHandler,
+  ordenarPorMarcaHandler,
 };
