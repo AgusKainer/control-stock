@@ -1,4 +1,4 @@
-const getDB = require("../../controller/index.controller");
+const { getDB } = require("../../controller/index.controller");
 
 const getDBHandler = async (req, res) => {
   try {
