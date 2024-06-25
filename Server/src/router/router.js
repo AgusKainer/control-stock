@@ -9,8 +9,16 @@ const {
   orderPorCategoriaHandler,
   ordenarPorMarcaHandler,
 } = require("../handler/index.handler");
+const {
+  exportarCSVHanlder,
+  exportarExcelHandler,
+} = require("../handler/exportarProducto/exportarProducto.handler");
 
 const router = Router();
+//DESCRAGAR ARCHIVOS
+router.get("/csv", exportarCSVHanlder);
+router.get("/exel", exportarExcelHandler);
+
 router.get("/nombre", orderPorNombreHandler);
 router.get("/categoria", orderPorCategoriaHandler);
 router.get("/marca", ordenarPorMarcaHandler);

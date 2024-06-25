@@ -1,0 +1,7 @@
+"id","nombre","descripcion","categoria","precio","cantidadEnStock","estadoDelProducto","marca"
+"0e520edd-2193-499d-af0f-540590b01313","pala ancha","especial para hacer mezcla ","herramientas",1500,100,"en stock","paleitor"
+"70c53861-ebdb-4a83-a9ef-060209f51c70","guantes de tela","guantes de uso general","accesorios",500,100,"en stock","patito"
+"d232f8f8-cedc-4673-a832-689021c38105","cinta metrica","uso general, para medir los objetos","herramientas",500,100,"en stock","catepiller"
+"e2f32a09-0fa1-4180-9a77-de58239524dc","manguera niveladora","uso general, para nivelar","herramientas",1500,100,"en stock","patito"
+"eb10cc3d-25ba-4cf0-bda5-1a30c58f43e2","martillo","martillo de uso general","herramientas",2500,100,"en stock","hammer"
+"fe69be08-6385-4816-8f23-d797bcfd350b","martillo carpintero","martillo de proposito de carpinteria","herramientas",2500,100,"en stock","hammer" 
