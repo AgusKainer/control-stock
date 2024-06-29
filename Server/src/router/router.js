@@ -19,6 +19,7 @@ const router = Router();
 router.get("/csv", exportarCSVHanlder);
 router.get("/exel", exportarExcelHandler);
 
+// ordenamiento
 router.get("/nombre", orderPorNombreHandler);
 router.get("/categoria", orderPorCategoriaHandler);
 router.get("/marca", ordenarPorMarcaHandler);
@@ -28,5 +29,4 @@ router.get("/:id", productoIdHanlder);
 router.post("/", createProductoHandler);
 router.delete("/:id", deleteProductoHanlder);
 router.put("/:id", updateProductoHandler);
-// ordenamiento
 module.exports = router;
