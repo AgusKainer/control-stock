@@ -10,6 +10,12 @@ export const api = createApi({
       query: () => "/",
       providesTags: ["Stock"],
     }),
+    productoID: builder.query({
+      query: (id) => ({
+        url: `/${id}`,
+      }),
+      invalidatesTags: ["Stock"],
+    }),
     agregarProducto: builder.mutation({
       query: (producto) => ({
         url: "/",
@@ -21,7 +27,7 @@ export const api = createApi({
     actualizar: builder.mutation({
       query: (producto) => ({
         url: `/${producto.id}`,
-        metohd: "PUT",
+        method: "PUT",
         body: producto,
       }),
       invalidatesTags: ["Stock"],
@@ -38,6 +44,7 @@ export const api = createApi({
 
 export const {
   useGetAllProductsQuery,
+  useProductoIDQuery,
   useAgregarProductoMutation,
   useActualizarMutation,
   useBorrarMutation,

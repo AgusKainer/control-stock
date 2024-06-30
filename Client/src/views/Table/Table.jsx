@@ -1,17 +1,17 @@
 import React from "react";
 import {
   useGetAllProductsQuery,
-  useActualizarMutation,
   useBorrarMutation,
 } from "../../redux/api/apiSlice";
 import { Link } from "react-router-dom";
 
 const Table = () => {
   const { data, error, isLoading } = useGetAllProductsQuery();
+  const [borrar] = useBorrarMutation();
+
   if (error) return <div>Error</div>;
   if (isLoading) return <div>Cargando...</div>;
-
-  const [borrar] = useBorrarMutation();
+  console.log(data);
 
   const borrarProducto = async (id) => {
     try {

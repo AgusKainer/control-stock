@@ -1,27 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAgregarProductoMutation } from "../../redux/api/apiSlice";
+import { formHook } from "../../CustomHooks/FormHooks";
 
 const CrearProducto = () => {
-  const [producto, setProducto] = useState({
+  const initialProducto = {
     nombre: "",
     categoria: "",
     precio: 0,
     cantidadEnStock: 0,
-
     marca: "",
     imagenDelProducto: "",
     precioPorMayor: 0,
     descuento: 0,
-  });
-  const [agregar] = useAgregarProductoMutation();
-  const change = ({ target }) => {
-    const { name, value } = target;
-    setProducto({
-      ...producto,
-      [name]: value,
-    });
   };
+  const { producto, change } = formHook(initialProducto);
+  const [agregar] = useAgregarProductoMutation();
+
   const enviar = async (e) => {
     e.preventDefault();
     await agregar(producto);
