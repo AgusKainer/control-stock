@@ -8,6 +8,8 @@ const {
 } = require("./stock/orderProducto.controller");
 const productoID = require("./stock/productoId.controller");
 const updateProducto = require("./stock/updateProducto.controller");
+//USERS
+const registroController = require("./user/registro.controller");
 
 module.exports = {
   getDB,
@@ -18,4 +20,6 @@ module.exports = {
   ordenarPorNombre,
   ordenarPorCategoria,
   orderPorMarca,
+  // USERS
+  registroController,
 };

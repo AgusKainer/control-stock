@@ -8,6 +8,8 @@ const {
   orderPorCategoriaHandler,
   ordenarPorMarcaHandler,
 } = require("./stock/orderProducto.handler");
+//USER
+const registroUserHandler = require("./user/createUserHandler");
 
 module.exports = {
   getDBHandler,
@@ -18,4 +20,6 @@ module.exports = {
   orderPorNombreHandler,
   orderPorCategoriaHandler,
   ordenarPorMarcaHandler,
+  //USER
+  registroUserHandler,
 };
