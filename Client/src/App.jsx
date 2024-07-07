@@ -6,7 +6,6 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <h1>Hola</h1>
       <Routes>
         <Route path="/" element={<Table />} />
         <Route path="/formulario" element={<CrearProducto />} />

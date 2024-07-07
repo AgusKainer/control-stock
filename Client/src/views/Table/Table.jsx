@@ -4,6 +4,7 @@ import {
   useBorrarMutation,
 } from "../../redux/api/apiSlice";
 import { Link } from "react-router-dom";
+import style from "../../css/tabla.module.css";
 
 const Table = () => {
   const { data, error, isLoading } = useGetAllProductsQuery();
@@ -23,10 +24,12 @@ const Table = () => {
 
   return (
     <div>
-      <Link to="/formulario">Agregar Producto</Link>
-      <table>
+      <Link className={style.btnAgregar} to="/formulario">
+        Agregar Producto
+      </Link>
+      <table className={style.table}>
         <thead>
-          <tr>
+          <tr className={style.tableHead}>
             <th>ID</th>
             <th>NOMBRE</th>
             <th>CATEGORÍA</th>
@@ -57,9 +60,14 @@ const Table = () => {
               <td>{pro.descuento}</td>
               <td>
                 <Link to={`/actualizar/${pro.id}`}>
-                  <button>ACTUALIZAR</button>
+                  <button className={style.btn}>ACTUALIZAR</button>
                 </Link>
-                <button onClick={() => borrarProducto(pro.id)}>BORRAR</button>
+                <button
+                  className={style.btn}
+                  onClick={() => borrarProducto(pro.id)}
+                >
+                  BORRAR
+                </button>
               </td>
             </tr>
           ))}
