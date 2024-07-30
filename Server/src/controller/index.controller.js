@@ -10,6 +10,7 @@ const productoID = require("./stock/productoId.controller");
 const updateProducto = require("./stock/updateProducto.controller");
 //USERS
 const registroController = require("./user/registro.controller");
+const iniciarSesionController = require("./user/iniciarSesion.controller");
 
 module.exports = {
   getDB,
@@ -22,4 +23,5 @@ module.exports = {
   orderPorMarca,
   // USERS
   registroController,
+  iniciarSesionController,
 };

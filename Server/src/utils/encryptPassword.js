@@ -1,4 +1,5 @@
 const bcrypt = require("bcryptjs");
+const User = require("../models/user");
 require("dotenv").config();
 
 const saltRound = 5;
@@ -13,4 +14,12 @@ const encryptPassword = async (password) => {
   }
 };
 
-module.exports = encryptPassword;
+const comparePassword = async (password, userPassword) => {
+  try {
+    return await bcrypt.compare(password, userPassword);
+  } catch (error) {
+    throw new Error("CONTRASEÑA INCORRECTA");
+  }
+};
+
+module.exports = { encryptPassword, comparePassword };

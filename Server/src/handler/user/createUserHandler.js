@@ -6,7 +6,7 @@ const registroUserHandler = async (req, res) => {
     const user = await registroController({ email, password });
     res.status(200).json({ auth: true, message: "Registro exitoso", user });
   } catch (error) {
-    res.status(500).json({ message: "Usuario no creado", error: error });
+    res.status(500).json({ message: "Usuario no creado" });
   }
 };
 

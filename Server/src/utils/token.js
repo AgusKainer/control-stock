@@ -8,12 +8,7 @@ const generateToken = (data) => {
 };
 
 const verifyToken = (dataToken) => {
-  try {
-    const token = jwt.verify(dataToken, secret);
-    return token;
-  } catch (error) {
-    throw new Error("TOKEN INVALIDO");
-  }
+  return jwt.verify(dataToken, secret);
 };
 
 module.exports = {

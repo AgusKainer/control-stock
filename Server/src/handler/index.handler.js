@@ -10,6 +10,7 @@ const {
 } = require("./stock/orderProducto.handler");
 //USER
 const registroUserHandler = require("./user/createUserHandler");
+const iniciarSesionHandler = require("./user/iniciarSesionHandler");
 
 module.exports = {
   getDBHandler,
@@ -22,4 +23,5 @@ module.exports = {
   ordenarPorMarcaHandler,
   //USER
   registroUserHandler,
+  iniciarSesionHandler,
 };
