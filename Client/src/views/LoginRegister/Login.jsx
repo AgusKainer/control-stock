@@ -9,6 +9,7 @@ const Login = () => {
   const { producto, change } = formHook(initialLogin);
   const login = (e) => {
     e.preventDefault();
+    console.log("hola");
   };
   return (
     <>
